@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.AppHost", "UOC.Consent.Platform\UOC.Consent.Platform.AppHost\UOC.Consent.Platform.AppHost.csproj", "{02B00700-727B-4BBD-8F4F-373D19F2F449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.ServiceDefaults", "UOC.Consent.Platform\UOC.Consent.Platform.ServiceDefaults\UOC.Consent.Platform.ServiceDefaults.csproj", "{36789569-4C32-463A-A25B-D9AE0B8A759F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.ApiService", "UOC.Consent.Platform\UOC.Consent.Platform.ApiService\UOC.Consent.Platform.ApiService.csproj", "{B5B9416E-EFA2-4654-9292-509492910D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.Web", "UOC.Consent.Platform\UOC.Consent.Platform.Web\UOC.Consent.Platform.Web.csproj", "{190C832C-46A0-4BE7-9C16-8393570C2F11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{1D150407-A41B-44AA-AE8C-5FAC1619C33B}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.infra.yml = docker-compose.infra.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.Shared", "UOC.Consent.Platform\UOC.Consent.Platform.Shared\UOC.Consent.Platform.Shared.csproj", "{280079D0-CAB2-42DE-9B1A-A5A088A5A9BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.Application", "UOC.Consent.Platform\UOC.Consent.Platform.Application\UOC.Consent.Platform.Application.csproj", "{1D98D4BA-B557-4AA6-9B03-054646ABBF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.Infrastructure", "UOC.Consent.Platform\UOC.Consent.Platform.Infrastructure\UOC.Consent.Platform.Infrastructure.csproj", "{DDA62BBC-EF54-44DF-9D3C-35A5E5F2A18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOC.Consent.Platform.Domain", "UOC.Consent.Platform\UOC.Consent.Platform.Domain\UOC.Consent.Platform.Domain.csproj", "{85065919-57F7-47B2-8551-207BB852CFD5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UOC.Consent.Platform.BoundedContext", "UOC.Consent.Platform\UOC.Consent.Platform.BoundedContext\UOC.Consent.Platform.BoundedContext.fsproj", "{69C318E5-13DB-4147-8388-E6F8AB1AF7A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02B00700-727B-4BBD-8F4F-373D19F2F449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B00700-727B-4BBD-8F4F-373D19F2F449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B00700-727B-4BBD-8F4F-373D19F2F449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B00700-727B-4BBD-8F4F-373D19F2F449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36789569-4C32-463A-A25B-D9AE0B8A759F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36789569-4C32-463A-A25B-D9AE0B8A759F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36789569-4C32-463A-A25B-D9AE0B8A759F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36789569-4C32-463A-A25B-D9AE0B8A759F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B9416E-EFA2-4654-9292-509492910D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B9416E-EFA2-4654-9292-509492910D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B9416E-EFA2-4654-9292-509492910D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B9416E-EFA2-4654-9292-509492910D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190C832C-46A0-4BE7-9C16-8393570C2F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190C832C-46A0-4BE7-9C16-8393570C2F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190C832C-46A0-4BE7-9C16-8393570C2F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190C832C-46A0-4BE7-9C16-8393570C2F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280079D0-CAB2-42DE-9B1A-A5A088A5A9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280079D0-CAB2-42DE-9B1A-A5A088A5A9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280079D0-CAB2-42DE-9B1A-A5A088A5A9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280079D0-CAB2-42DE-9B1A-A5A088A5A9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D98D4BA-B557-4AA6-9B03-054646ABBF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D98D4BA-B557-4AA6-9B03-054646ABBF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D98D4BA-B557-4AA6-9B03-054646ABBF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D98D4BA-B557-4AA6-9B03-054646ABBF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA62BBC-EF54-44DF-9D3C-35A5E5F2A18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA62BBC-EF54-44DF-9D3C-35A5E5F2A18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA62BBC-EF54-44DF-9D3C-35A5E5F2A18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA62BBC-EF54-44DF-9D3C-35A5E5F2A18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85065919-57F7-47B2-8551-207BB852CFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85065919-57F7-47B2-8551-207BB852CFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85065919-57F7-47B2-8551-207BB852CFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85065919-57F7-47B2-8551-207BB852CFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C318E5-13DB-4147-8388-E6F8AB1AF7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C318E5-13DB-4147-8388-E6F8AB1AF7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C318E5-13DB-4147-8388-E6F8AB1AF7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C318E5-13DB-4147-8388-E6F8AB1AF7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
