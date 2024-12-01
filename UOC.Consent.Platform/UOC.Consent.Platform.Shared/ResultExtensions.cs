@@ -5,55 +5,75 @@ namespace UOC.Consent.Platform.Shared;
 public static class ResultExtensions
 {
     public static async Task<Result<TOut>> Bind<TIn, TOut>(this Result<TIn> res, Func<TIn, Task<Result<TOut>>> output)
-        => res.IsSuccess
+    {
+        return res.IsSuccess
             ? await output(res.Value)
             : Failure<TOut>(res.Error);
+    }
 
     public static Result<TOut> Bind<TIn, TOut>(this Result<TIn> result, Func<TIn, Result<TOut>> output)
-        => result.IsSuccess
+    {
+        return result.IsSuccess
             ? output(result.Value)
             : Failure<TOut>(result.Error);
+    }
 
     public static async Task<Result<TOut>> Bind<TIn, TOut>(this Task<Result<TIn>> res, Func<TIn, Result<TOut>> bind)
-        => (await res).Bind(bind);
+    {
+        return (await res).Bind(bind);
+    }
 
     public static async Task<Result<TOut>> Bind<TIn, TOut>(
         this Task<Result<TIn>> res,
         Func<TIn, Task<Result<TOut>>> bind)
-        => await (await res).Bind(bind);
+    {
+        return await (await res).Bind(bind);
+    }
 
     public static Result<TOut> Map<TIn, TOut>(this Result<TIn> result, Func<TIn, TOut> mapper)
-        => result.IsSuccess
+    {
+        return result.IsSuccess
             ? mapper(result.Value)
             : Failure<TOut>(result.Error);
+    }
 
     public static async Task<Result<TOut>> Map<TIn, TOut>(this Task<Result<TIn>> result, Func<TIn, TOut> mapper)
-        => (await result).Map(mapper);
+    {
+        return (await result).Map(mapper);
+    }
 
     public static Task<Result<TR>> Select<T, TR>(this Task<Result<T>> result, Func<T, TR> project)
-        => result.Map(project);
+    {
+        return result.Map(project);
+    }
 
     public static Result<TR> SelectMany<T, TK, TR>(this Result<T> res, Func<T, Result<TK>> bind, Func<T, TK, TR> map)
-        => res.Bind(bind).Map(input => map(res.Value, input));
+    {
+        return res.Bind(bind).Map(input => map(res.Value, input));
+    }
 
     public static async Task<Result<TR>> SelectMany<T, TK, TR>(
         this Task<Result<T>> result,
         Func<T, Result<TK>> binder,
         Func<T, TK, TR> mapper)
-        => await result
-                 .Bind(binder)
-                 .Map(async input => mapper((await result).Value, input)) switch
+    {
+        return await result
+                     .Bind(binder)
+                     .Map(async input => mapper((await result).Value, input)) switch
         {
             { IsSuccess: true } a => await a.Value,
             { IsFailure: true } c => Failure<TR>(c.Error),
             _                     => throw new Exception("Result is in an invalid state")
         };
+    }
 
     public static Task<Result<TR>> SelectMany<T, TK, TR>(
         this Result<T> result,
         Func<T, Task<Result<TK>>> binder,
-        Func<T, TK, TR> project) 
-            => result.Bind(binder).Map(x => project(result.Value, x));
+        Func<T, TK, TR> project)
+    {
+        return result.Bind(binder).Map(x => project(result.Value, x));
+    }
 
     public static async Task<Result<TR>> SelectMany<T, TK, TR>(
         this Task<Result<T>> result,
@@ -79,13 +99,17 @@ public static class ResultExtensions
         this Result<TIn> result,
         Func<TIn, TOut> onSuccess,
         Func<DomainError, TOut> onFailure)
-        => result.IsSuccess
+    {
+        return result.IsSuccess
             ? onSuccess(result.Value)
             : onFailure(result.Error);
+    }
 
     public static async Task<TOut> Match<TIn, TOut>(
         this Task<Result<TIn>> resultTask,
         Func<TIn, TOut> onSuccess,
         Func<DomainError, TOut> onFailure)
-        => (await resultTask).Match(onSuccess, onFailure);
+    {
+        return (await resultTask).Match(onSuccess, onFailure);
+    }
 }

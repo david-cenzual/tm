@@ -5,10 +5,12 @@ namespace UOC.Consent.Platform.ApiService.Behaviours;
 
 public static class ErrorBehaviour
 {
-    public static IActionResult Map(DomainError error) =>
-        error.Match<IActionResult>(
+    public static IActionResult Map(DomainError error)
+    {
+        return error.Match<IActionResult>(
             err => new NotFoundObjectResult(err),
             err => new BadRequestObjectResult(err),
             err => new ObjectResult(err)
         );
+    }
 }

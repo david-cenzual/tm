@@ -7,7 +7,7 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:17259;http://localhost:15132",
       "environmentVariables": {
-        "ASPIRE_ALLOW_UNSECURED_TRANSPORT" : "true",
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DOTNET_ENVIRONMENT": "Development",
         "DOTNET_DASHBOARD_OTLP_ENDPOINT_URL": "https://localhost:21143",
@@ -20,7 +20,7 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:15132",
       "environmentVariables": {
-        "ASPIRE_ALLOW_UNSECURED_TRANSPORT" : "true",
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DOTNET_ENVIRONMENT": "Development",
         "DOTNET_DASHBOARD_OTLP_ENDPOINT_URL": "http://localhost:19249",

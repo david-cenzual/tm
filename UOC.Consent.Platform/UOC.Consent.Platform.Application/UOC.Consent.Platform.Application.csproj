@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR" Version="12.4.1" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+        <PackageReference Include="MediatR" Version="12.4.1"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UOC.Consent.Platform.Domain\UOC.Consent.Platform.Domain.csproj" />
-      <ProjectReference Include="..\UOC.Consent.Platform.Shared\UOC.Consent.Platform.Shared.csproj" />
+        <ProjectReference Include="..\UOC.Consent.Platform.Domain\UOC.Consent.Platform.Domain.csproj"/>
+        <ProjectReference Include="..\UOC.Consent.Platform.Infrastructure\UOC.Consent.Platform.Infrastructure.csproj"/>
+        <ProjectReference Include="..\UOC.Consent.Platform.Shared\UOC.Consent.Platform.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

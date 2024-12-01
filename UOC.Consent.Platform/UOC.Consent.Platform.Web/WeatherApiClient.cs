@@ -3,17 +3,14 @@ namespace UOC.Consent.Platform.Web;
 public class WeatherApiClient(HttpClient httpClient)
 {
     public async Task<WeatherForecast[]> GetWeatherAsync(int maxItems = 10,
-        CancellationToken cancellationToken = default)
+                                                         CancellationToken cancellationToken = default)
     {
         List<WeatherForecast>? forecasts = null;
 
         await foreach (var forecast in httpClient.GetFromJsonAsAsyncEnumerable<WeatherForecast>("/weatherforecast",
                            cancellationToken))
         {
-            if (forecasts?.Count >= maxItems)
-            {
-                break;
-            }
+            if (forecasts?.Count >= maxItems) break;
 
             if (forecast is not null)
             {
